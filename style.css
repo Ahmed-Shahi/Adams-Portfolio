@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f212a;
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Portfolio Container Layout */
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Top Section containing Nav & Hero */
+.top-section {
+    background-color: #282a36;
+    width: 100%;
+    height: 80vh;
+    /* padding-bottom: 40px; */
+    /* position: relative; */
+    /* z-index: 1; */
+}
+
+
+/* Navigation Bar rules */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 24px 80px;
+    height: 90px;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.nav-item {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #9598a6;
+}
+
+.nav-item.active {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Hero Section rules */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 80px 20px 80px;
+    gap: 40px;
+    max-height: 50vh;
+    /* position: relative; */
+    /* z-index: 2; */
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-subtitle {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.hero-line {
+    width: 130px;
+    height: 4px;
+    background-color: #f8c543;
+    margin-bottom: 24px;
+    border-radius: 2px;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: #9598a6;
+    max-width: 300px;
+    line-height: 1.6;
+}
+
+/* Central Portrait Backdrop Circle */
+.hero-center {
+    flex: 1.2;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    bottom: 10px;
+}
+
+.avatar-circle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #242631;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    bottom: 20px;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    /* z-index: 1; */
+}
+
+/* Right Services & Social circles */
+.hero-right {
+    flex: 1;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    /* position: relative;
+    right: 160px; */
+}
+
+.services-brief {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    ;
+}
+
+.services-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9598a6;
+    font-weight: 600;
+}
+
+.services-headline {
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+.services-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f8c543;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border:none;
+    background-color:  #44475a;
+    color: #f8c543;
+}
+
+/* Brands Logos bar overlapping Hero */
+.brands-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 3;
+}
+
+.brands-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    max-width: 1100px;
+    background-color: #2e303f;
+    border-radius: opx;
+    padding: 30px 48px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.brand-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.55rem;
+    color: #ffffff;
+    cursor: default;
+    background-color:#444546;
+    padding: 10px 30px 10px 30px;
+}
+
+.brand-svg {
+    width: 28px;
+    height: 28px;
+}
+
+.meta-logo {
+    color: #1877F2;
+    width: 32px;
+    height: 32px;
+}
+
+.brand-text {
+    letter-spacing: -0.5px;
+}
+
+.google-wordmark {
+    display: flex;
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.google-letter {
+    display: inline-block;
+}
+
+.letter-g { color: #4285F4; }
+.letter-o1 { color: #EA4335; }
+.letter-o2 { color: #FBBC05; }
+.letter-g2 { color: #4285F4; }
+.letter-l { color: #34A853; }
+.letter-e { color: #EA4335; }
+
+.linkedin-wordmark {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.linked-text {
+    color: #ffffff;
+}
+
+.in-badge {
+    background-color: #0077b5;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 2px;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.slack-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.slack-text {
+    text-transform: lowercase;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+/* Bottom section statistical highlights & service row items */
+.needs-section {
+    background-color: #1f212a;
+    width: 100%;
+    padding: 110px 80px 80px 80px;
+}
+
+.needs-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 80px;
+}
+
+/* Needs Left Column */
+.needs-left {
+    flex: 1;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.needs-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.needs-desc {
+    font-size: 1.1rem;
+    color: #9598a6;
+    line-height: 1.65;
+    margin-bottom: 48px;
+    max-width: 380px;
+}
+
+/* Stats 2x2 wrapping grid */
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px 0;
+}
+
+.stat-box {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat-num {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #f8c543;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #9598a6;
+}
+
+/* Needs Right Column */
+.needs-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Service Row rules */
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.service-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.service-thumbnail {
+    width: 90px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.service-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.service-count {
+    font-size: 0.9rem;
+    color: #9598a6;
+}
+
+.service-arrow {
+    display: flex;
+    align-items: center;
+    color: #f8c543;
+}
+
+/* Slider buttons controls wrapper style */
+.slider-controls {
+    display: flex;
+    gap: 12px;
+    align-self: flex-start;
+}
+
+.slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Media Queries for responsive rendering */
+@media (max-width: 1024px) {
+    .nav-bar {
+        padding: 24px 40px;
+    }
+
+    .hero-section {
+        padding: 40px 40px 20px 40px;
+    }
+
+    .needs-section {
+        padding: 100px 40px 60px 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero-left, .hero-right {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .hero-line {
+        align-self: center;
+    }
+
+    .services-link {
+        align-self: center;
+    }
+
+    .needs-content {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .needs-left, .needs-right {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .needs-heading, .needs-desc {
+        max-width: 100%;
+    }
+
+    .stats-grid {
+        max-width: 100%;
+    }
+
+    .brands-wrapper {
+        padding: 24px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-bar {
+        padding: 24px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-section {
+        padding: 20px 20px;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .avatar-circle {
+        width: 290px;
+        height: 290px;
+    }
+
+    .brands-wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .needs-section {
+        padding: 80px 20px 40px 20px;
+    }
+
+    .needs-heading {
+        font-size: 2.2rem;
+    }
+
+    .stat-box {
+        width: 100%;
+    }
+
+    .service-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .service-arrow {
+        align-self: flex-end;
+    }
+}
