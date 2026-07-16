@@ -25,17 +25,14 @@ img {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 /* Top Section containing Nav & Hero */
 .top-section {
     background-color: #282a36;
     width: 100%;
-    height: 80vh;
-    /* padding-bottom: 40px; */
-    /* position: relative; */
-    /* z-index: 1; */
+    max-height: 280vh;
 }
 
 
@@ -43,7 +40,6 @@ img {
 .nav-bar {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     padding: 24px 80px;
     height: 90px;
     position: relative;
@@ -187,7 +183,6 @@ img {
     flex-direction: column;
     gap: 12px;
     position: relative;
-    ;
 }
 
 .services-label {
@@ -212,6 +207,8 @@ img {
     color: #f8c543;
     font-weight: 700;
     font-size: 1rem;
+    position: absolute;
+    top: 20px;
 }
 
 .social-links {
@@ -227,8 +224,8 @@ img {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    border:none;
-    background-color:  #44475a;
+    border: none;
+    background-color: #44475a;
     color: #f8c543;
 }
 
@@ -238,9 +235,8 @@ img {
     justify-content: center;
     width: 100%;
     height: 100px;
-    margin-top: -40px;
     position: relative;
-    z-index: 3;
+    top: 40px;
 }
 
 .brands-wrapper {
@@ -266,7 +262,7 @@ img {
     font-size: 1.55rem;
     color: #ffffff;
     cursor: default;
-    background-color:#444546;
+    background-color: #444546;
     padding: 10px 30px 10px 30px;
 }
 
@@ -296,12 +292,29 @@ img {
     display: inline-block;
 }
 
-.letter-g { color: #4285F4; }
-.letter-o1 { color: #EA4335; }
-.letter-o2 { color: #FBBC05; }
-.letter-g2 { color: #4285F4; }
-.letter-l { color: #34A853; }
-.letter-e { color: #EA4335; }
+.letter-g {
+    color: #4285F4;
+}
+
+.letter-o1 {
+    color: #EA4335;
+}
+
+.letter-o2 {
+    color: #FBBC05;
+}
+
+.letter-g2 {
+    color: #4285F4;
+}
+
+.letter-l {
+    color: #34A853;
+}
+
+.letter-e {
+    color: #EA4335;
+}
 
 .linkedin-wordmark {
     display: flex;
@@ -503,21 +516,62 @@ img {
 
 @media (max-width: 900px) {
     .hero-section {
+        display: flex;
         flex-direction: column;
-        text-align: center;
-        gap: 50px;
+        /* text-align: center; */
+        /* gap: 50px; */
     }
 
-    .hero-left, .hero-right {
-        max-width: 100%;
-        align-items: center;
+    .nav-links {
+        display: none;
     }
 
-    .hero-line {
-        align-self: center;
+    .brands-section {
+        /* display: flex; */
+        /* justify-content: center; */
+        /* width: 100%; */
+        /* height: 100px; */
+        position: relative;
+        bottom: 700px;
+
+    }
+
+    .services-brief a {
+        display: flex;
+        align-items: flex-start;
+        /* position: relative; */
+        /* top: 30px; */
     }
 
     .services-link {
+        /* display: flex; */
+        /* justify-content: flex-start; */
+        position: absolute;
+        left: 0px;
+    }
+
+    .hero-left,
+    .hero-right {
+        order: -1;
+        max-width: 100%;
+        /* align-items: center; */
+    }
+
+    .top-section {
+        /* max-height: 100vh; */
+        background-color: #282a36;
+        padding-bottom: 400px;
+    }
+
+    .hero-line {
+        /* align-self: center; */
+    }
+
+    .services-link {
+        align-self: center;
+    }
+
+    .hero-center {
         align-self: center;
     }
 
@@ -526,12 +580,14 @@ img {
         gap: 60px;
     }
 
-    .needs-left, .needs-right {
+    .needs-left,
+    .needs-right {
         max-width: 100%;
         width: 100%;
     }
 
-    .needs-heading, .needs-desc {
+    .needs-heading,
+    .needs-desc {
         max-width: 100%;
     }
 
@@ -540,56 +596,58 @@ img {
     }
 
     .brands-wrapper {
-        padding: 24px 30px;
-    }
-}
-
-@media (max-width: 600px) {
-    .nav-bar {
-        padding: 24px 20px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero-section {
-        padding: 20px 20px;
-    }
-
-    .hero-title {
-        font-size: 2.8rem;
-    }
-
-    .avatar-circle {
-        width: 290px;
-        height: 290px;
-    }
-
-    .brands-wrapper {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .needs-section {
-        padding: 80px 20px 40px 20px;
-    }
-
-    .needs-heading {
-        font-size: 2.2rem;
-    }
-
-    .stat-box {
-        width: 100%;
-    }
-
-    .service-row {
-        flex-direction: column;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
+        padding: 24px;
+        position: relative;
+        top: 407px;
+        height: 100px;
+        /* height: auto; */
+        /* border-radius: 8px; */
     }
 
-    .service-arrow {
-        align-self: flex-end;
+    .brand-card {
+        background-color: #2d2e32;
+        border-radius: 6px;
+        padding: 1px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* positionpx; */
+        gap: 8px;
+        font-size: 1.2rem;
+    }
+
+    .brand-svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .meta-logo {
+        width: 26px;
+        height: 26px;
+    }
+
+    .google-wordmark {
+        font-size: 1.25rem;
+    }
+
+    .linkedin-wordmark {
+        font-size: 1.25rem;
+    }
+
+    .in-badge {
+        font-size: 1.05rem;
+        padding: 1px 4px;
+    }
+
+    .slack-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slack-text {
+        font-size: 1.25rem;
     }
 }
